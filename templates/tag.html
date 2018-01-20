@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block title %}Posts tagged {{ tag.name }}{% endblock title %}
+
+{% block main %}
+
+Posts tagged {{ tag.name }}
+
+<div class="page-listing">
+  {% for page in tag.pages %}
+    {{ macros::post_listing(page = page) }}
+  {% endfor %}
+</div>
+
+{% endblock main %}

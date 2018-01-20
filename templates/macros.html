@@ -1,0 +1,17 @@
+
+{% macro time_tag(date) %}
+  <time datetime="{{ date | date(format="%Y-%m-%d") }}">
+    {{ date | date(format="%d %b %Y") }}
+  </time>
+{% endmacro time_tag %}
+
+{% macro post_listing(page) %}
+  <article>
+    <h2 class="post-title">
+      <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    </h2>
+    {{ macros::time_tag(date = page.date) }}
+
+    {{ page.summary | safe }}
+  </article>
+{% endmacro post_listing %}
