@@ -1,12 +1,20 @@
-# The URL the site will be built for
+title = "Cowie.me"
 base_url = "https://cowie.me"
+description = ""
+language_code = "en"
 
-# Whether to automatically compile all Sass files in the sass directory
+
 compile_sass = true
 
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Gutenberg
+generate_rss = true
+rss_limit = 100
+
 highlight_code = true
+highlight_theme = "monokai"
+
+generate_tags_pages = true
+generate_categories_pages = true
 
 [extra]
-# Put all your custom variables here
+subtitle = ""
+author = { name = "Matthew Cowie", email = "matthew@cowie.me" }
