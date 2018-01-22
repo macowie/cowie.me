@@ -1,40 +1,30 @@
 {% extends "base.html" %}
+{% import "macros.html" as macros %}
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
+{% block title %}{{ page.title }}{% endblock title %}
+
 
 {% block main %}
 
 <h1>{{ page.title }}</h1>
+{{ macros::time_tag(date = page.date) }}
+<span class="category"> Filed under {{ page.category | safe }}</span>
 
-<time datetime="{{ page.date | date(format="%Y-%m-%d") }}" class="post-date">
-  {{ page.date | date(format="%b %d, %Y") }}
-  {% if page.extra.updated %} (updated on {{ page.extra.updated | date(format="%b %d, %Y") }}) {% endif %}
-</time>
+<div class="content">
+  {{ page.content | safe }}
+</div>
 
-<aside id="toc">
-  <h2>Table of Contents</h2>
-  <ol>
-    {% for h2 in page.toc %}
-      <li>
-        <a href="{{h2.permalink | safe}}">{{ h2.title | safe }}</a>
-        {% if h2.children %}
-        <ol>
-          {% for h3 in h2.children %}
-            <li>
-              <a href="{{h3.permalink | safe}}">{{ h3.title | safe }}</a>
-            </li>
-          {% endfor %}
-        </ol>
-        {% endif %}
-    </li>{% endfor %}
-  </ol>
-</aside>
-{{ page.content | safe }}
+<ul class="taxonomy-list tag">
+  {% for tag in page.tags %}
+    <li>{{ tag }}</li>
+  {% endfor %}
+</ul>
+
 
 {% endblock main %}
 
+
 {% block after_main %}
-<hr>
 <nav>
   {% if page.previous %}
     <a class="prev" href="{{ page.previous.permalink | safe }}">

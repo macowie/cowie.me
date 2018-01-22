@@ -7,7 +7,7 @@
 
 Posts tagged {{ tag.name }}
 
-<div class="page-listing">
+<div class="article-index">
   {% for page in tag.pages %}
     {{ macros::post_listing(page = page) }}
   {% endfor %}

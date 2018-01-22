@@ -3,7 +3,7 @@
 
 {% block main %}
 
-<ul class="categories-index">
+<ul class="taxonomy-index categories">
   {% for category in categories %}
     <li><a href="/categories/{{ category.slug }}">{{ category.name }}</a></li>
   {% endfor %}
