@@ -1,3 +1,55 @@
+$dark-gray: #333;
+$off-white: #efefef;
+$green: #50f95f;
+
+html {
+  background-color: $dark-gray;
+  color: $off-white;
+}
+
 body {
-  background-color: #222222;
+  max-width: 55rem;
+  padding: 0.5rem;
+  width: 96%;
+  margin: 0 auto;
+}
+
+a, a:hover, a:visited {
+  color: $green;
+}
+
+.taxonomy-list {
+  padding-left: 0;
+  li {
+    display: inline-block;
+    background-color: darken($dark-gray, 10%);
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+ul.taxonomy-index {
+  li {
+
+  }
+}
+
+.article-index {
+  article {
+
+  }
+}
+
+blockquote {
+  border-left: 3px solid darken($dark-gray, 10%);
+  background-color: lighten($dark-gray, 5%);
+  padding: 0.2rem 2rem;
+  margin: 0.5rem 0;
+}
+
+hr {
+  background-color: darken($dark-gray, 10%);
+  height: 3px;
+  border: 0;
+  width: 100%;
 }
