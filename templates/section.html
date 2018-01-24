@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block title %}{{ section.title }}{% endblock title %}
+
+{% block main %}
+
+{{ section.content | safe}}
+
+<ul class="section-index {{ section.title }}">
+  {% for page in section.pages %}
+    {{ macros::post_listing(page = page) }}
+  {% endfor %}
+</ul>
+
+{% endblock main %}

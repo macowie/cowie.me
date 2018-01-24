@@ -1,7 +1,5 @@
 +++
-title = "Cowie.me"
-template = "base.html"
+title = "Home"
 +++
 
-#tdjhtdk
-jhbjhv
+Home Page

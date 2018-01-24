@@ -1,8 +1,43 @@
 {% extends "base.html" %}
+{% import "macros.html" as macros %}
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
+{% block title %}{{ page.title }}{% endblock title %}
+
 
 {% block main %}
-    <h1>{{ page.title }}</h1>
-    {{ page.content | safe }}
+
+<h1>{{ page.title }}</h1>
+{{ macros::time_tag(date = page.date) }}
+<span class="category"> Filed under {{ page.category | safe }}</span>
+
+<div class="content">
+  {{ page.content | safe }}
+</div>
+
+<ul class="taxonomy-list tag">
+  {% for tag in page.tags %}
+    <li>{{ tag }}</li>
+  {% endfor %}
+</ul>
+
+
 {% endblock main %}
+
+
+{% block after_main %}
+<nav>
+  {% if page.previous %}
+    <a class="prev" href="{{ page.previous.permalink | safe }}">
+      &laquo; {{ page.previous.title }}
+    </a>
+  {% endif %}
+
+  {% if page.next %}
+    <a class="next" href="{{ page.next.permalink | safe }}">
+      {{ page.next.title }} &raquo;
+    </a>
+  {% endif %}
+</nav>
+{% endblock after_main %}
+
+

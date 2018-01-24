@@ -1,3 +1,5 @@
+{% set static = get_section(path="static/_index.md") %}
+
 <!doctype html>
 
 <html lang="{{ config.language_code }}">
@@ -18,6 +20,12 @@
       <a href="/" title="Home">{{ config.title }}</a>
       <small>{{ config.extra.subtitle }}</small>
     </h3>
+
+    <nav>
+      {% for page in static.pages %}
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+      {% endfor %}
+    </nav>
   </header>
 
   <main>{% block main %}{% endblock main %}</main>
@@ -27,7 +35,7 @@
     <hr>
     <small>
       &copy; <time datetime="2018">2018</time>. All rights reserved.
-      <a href="{{ get_url(path="./pages/contact.md") }}">Contact</a>
+      <a href="{{ get_url(path="./static/contact.md") }}">Contact</a>
     </small>
   </footer>
 </body>

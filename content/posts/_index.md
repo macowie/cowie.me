@@ -1,4 +1,9 @@
 +++
-template = "post.html"
-render = false
+title = "Posts"
+sort_by = "date"
 +++
+
+
+## fohhh
+
+Page

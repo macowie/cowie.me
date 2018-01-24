@@ -6,15 +6,26 @@
 {% endmacro time_tag %}
 
 {% macro post_listing(page) %}
-  <article>
+  <article class="listing">
+    <h2 class="post-title">
+      <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    </h2>
+    {{ macros::time_tag(date = page.date) }}
+    {{ page.summary | safe }}
+  </article>
+{% endmacro post_listing %}
+
+{% macro post_listing_extended(page) %}
+  <article class="listing-extended">
     <h2 class="post-title">
       <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
     </h2>
     {{ macros::time_tag(date = page.date) }}
 
-    {{ page.summary | safe }}
+    {{ page.content | safe }}
   </article>
-{% endmacro post_listing %}
+{% endmacro post_listing_extended %}
+
 
 {% macro toc(toc) %}
 <aside id="toc">
