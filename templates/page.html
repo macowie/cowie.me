@@ -8,7 +8,7 @@
 
 <h1>{{ page.title }}</h1>
 {{ macros::time_tag(date = page.date) }}
-<span class="category"> Filed under {{ page.category | safe }}</span>
+<span class="category"> Filed under <a href="/categories/{{ page.category | slugify }}">{{ page.category }}</a></span>
 
 <div class="content">
   {{ page.content | safe }}
@@ -16,7 +16,7 @@
 
 <ul class="taxonomy-list tag">
   {% for tag in page.tags %}
-    <li>{{ tag }}</li>
+    <a href="/tags/{{ tag | slugify }}"><li>{{ tag }}</li></a>
   {% endfor %}
 </ul>
 
