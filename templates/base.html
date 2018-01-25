@@ -21,21 +21,20 @@
       <small>{{ config.extra.subtitle }}</small>
     </h3>
 
-    <nav>
-      {% for page in static.pages %}
-        <a href="{{ page.permalink }}">{{ page.title }}</a>
-      {% endfor %}
+    <nav class="primary">
+      {% for page in static.pages %}<a href="{{ page.permalink }}">{{ page.title }}</a>{% endfor %}
     </nav>
   </header>
 
   <main>{% block main %}{% endblock main %}</main>
-  <section>{% block after_main %}{% endblock after_main %}</section>
+
+  <section class="after-main">
+    {% block after_main %}{% endblock after_main %}
+  </section>
 
   <footer class="footer">
-    <hr>
     <small>
-      &copy; <time datetime="2018">2018</time>. All rights reserved.
-      <a href="{{ get_url(path="./static/contact.md") }}">Contact</a>
+      &copy; <time datetime="2018">2018</time>.
     </small>
   </footer>
 </body>
