@@ -1,6 +1,8 @@
 $dark-gray: #333;
 $off-white: #efefef;
 $green: #50f95f;
+$divider-size: 2px;
+$divider-color: darken($dark-gray, 10%);
 
 html {
   background-color: $dark-gray;
@@ -12,10 +14,17 @@ body {
   padding: 0.5rem;
   width: 96%;
   margin: 0 auto;
+  font-family: 'Helvetica', 'sans-serif';
+  font-size: large;
 }
 
-a, a:hover, a:visited {
+a, a:visited {
   color: $green;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($green, 20%);
+  }
 }
 
 .taxonomy-list {
@@ -40,16 +49,67 @@ ul.taxonomy-index {
   }
 }
 
+header {
+  padding: 1rem 0;
+}
+
+.header-title {
+  display: inline-block;
+  font-family: 'Century Gothic', 'Helvetica', 'sans-serif';
+
+  margin: 0;
+  a {
+    color: $off-white;
+  }
+}
+
+
+footer {
+  border-top: $divider-size solid $divider-color;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+main {
+
+}
+
+section.after-main {
+  padding: 1rem 0;
+}
+
+nav {
+  &.primary {
+    display: inline-block;
+    float: right;
+  }
+
+  &.intra {
+    width: 100%;
+    text-align: center;
+  }
+
+  a {
+    padding: 0 0.5rem;
+    display: inline-block;
+    border-right: $divider-size solid $divider-color;
+    &:last-of-type {
+      border: none;
+    }
+  }
+}
+
+
 blockquote {
-  border-left: 3px solid darken($dark-gray, 10%);
+  border-left: $divider-size solid $divider-color;
   background-color: lighten($dark-gray, 5%);
   padding: 0.2rem 2rem;
   margin: 0.5rem 0;
 }
 
 hr {
-  background-color: darken($dark-gray, 10%);
-  height: 3px;
+  background-color: $divider-color;
+  height: $divider-size;
   border: 0;
   width: 100%;
 }
