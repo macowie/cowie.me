@@ -11,7 +11,7 @@
       <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
     </h2>
     {{ macros::time_tag(date = page.date) }}
-    {{ page.summary | safe }}
+    {{ page.description | safe }}
   </article>
 {% endmacro post_listing %}
 
@@ -22,7 +22,7 @@
     </h2>
     {{ macros::time_tag(date = page.date) }}
 
-    {{ page.content | safe }}
+    {{ page.summary | safe }}
   </article>
 {% endmacro post_listing_extended %}
 
