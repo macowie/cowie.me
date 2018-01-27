@@ -3,6 +3,8 @@ $off-white: #efefef;
 $green: #50f95f;
 $divider-size: 2px;
 $divider-color: darken($dark-gray, 10%);
+$footer-height: 2rem;
+
 
 html {
   background-color: $dark-gray;
@@ -68,7 +70,31 @@ footer {
   border-top: $divider-size solid $divider-color;
   text-align: center;
   padding: 0.5rem;
+  color: darken($off-white, 30%);
+  height: $footer-height;
+
+  .copywrong {
+    height: $footer-height;
+    line-height: $footer-height;
+    float: left;
+  }
+
+  a.social {
+    float: right;
+    height: $footer-height;
+    padding: 0 0.3rem;
+    color: darken($off-white, 40%);
+    &:hover {
+      color: darken($off-white, 20%);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
+
 
 main {
 
