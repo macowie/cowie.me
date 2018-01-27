@@ -4,13 +4,22 @@
 {% block title %}{{ section.title }}{% endblock title %}
 
 {% block main %}
+  <h1>{{ section.title }}</h1>
 
-{{ section.content | safe}}
+  {{ section.content | safe }}
 
-<ul class="section-index {{ section.title }}">
   {% for page in section.pages %}
     {{ macros::post_listing(page = page) }}
   {% endfor %}
-</ul>
 
 {% endblock main %}
+
+{% block after_main %}
+  <nav class="intra">
+    {% if pager.previous %}
+      <a class="prev" href="{{ pager.previous }}">&laquo; Previous </a>
+    {% endif %}{% if page.next %}
+      <a class="next" href="{{ pager.next }}">Next &raquo;</a>
+    {% endif %}
+  </nav>
+{% endblock after_main %}
