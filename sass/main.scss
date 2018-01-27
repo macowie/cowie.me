@@ -126,6 +126,17 @@ nav {
   }
 }
 
+h1.title {
+  margin: 2rem 0 1rem 0;
+}
+
+.meta {
+  font-size: smaller;
+}
+
+.content {
+  margin-top: 2.5rem;
+}
 
 blockquote {
   border-left: $divider-size solid $divider-color;
