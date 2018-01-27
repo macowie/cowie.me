@@ -3,7 +3,7 @@ title = "Test 2"
 description = ""
 date = "2018-01-20"
 category = "Programming"
-tags = ["rust", "ruby"]
+tags = ["programming", "rust", "ruby"]
 +++
 
 

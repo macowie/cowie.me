@@ -3,7 +3,8 @@ title = "Test post"
 description = ""
 date = "2018-01-19"
 category = "Programming"
-tags = ["rust", "ruby"]
+tags = ["programming", "rust", "ruby"]
+
 +++
 
 Can't believe

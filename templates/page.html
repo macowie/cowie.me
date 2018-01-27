@@ -9,9 +9,9 @@
 <h1 class="title">{{ page.title }}</h1>
 
 <div class="meta">
-  {{ macros::time_tag(date = page.date) }} /
-  <a href="/categories/{{ page.category | slugify }}">{{ page.category }}</a>
-</div>
+  {{ macros::time_tag(date = page.date) }}
+<!-- / <a href="/categories/{{ page.category | slugify }}">{{ page.category }}</a>
+ --></div>
 
 <div class="content">
   {{ page.content | safe }}
