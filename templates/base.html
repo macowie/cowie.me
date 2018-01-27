@@ -17,10 +17,9 @@
 
 <body>
   <header>
-    <h3 class="header-title">
+    <h1 class="header-title">
       <a href="/" title="Home">{{ config.title }}</a>
-      <small>{{ config.extra.subtitle }}</small>
-    </h3>
+    </h1>
 
     <nav class="primary">
       {% for page in static.pages %}<a href="{{ page.permalink }}">{{ page.title }}</a>{% endfor %}
@@ -34,15 +33,17 @@
   </section>
 
   <footer class="footer">
-    <span class="copywrong">&copy; <time datetime="2018">2018</time></span>
+    <div class="copywrong">&copy; <time datetime="2018">2018</time></div>
 
-    <a class="social" href="{{ get_url(path = "./system/colophon.md") }}">
-      {{ icons::pencil() }}
-    </a><a class="social" href="/rss.xml">
-      {{ icons::rss() }}
-    </a><a class="social" href="https://github.com/macowie">
-      {{ icons::github() }}
-    </a>
+    <div class="icons">
+      <a class="social" href="{{ get_url(path = "./system/colophon.md") }}">
+        {{ icons::pencil() }}
+      </a><a class="social" href="/rss.xml">
+        {{ icons::rss() }}
+      </a><a class="social" href="https://github.com/macowie">
+        {{ icons::github() }}
+      </a>
+    </div>
   </footer>
 </body>
 

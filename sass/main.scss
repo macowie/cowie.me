@@ -3,8 +3,8 @@ $off-white: #efefef;
 $green: #50f95f;
 $divider-size: 2px;
 $divider-color: darken($dark-gray, 10%);
+$header-height: 2rem;
 $footer-height: 2rem;
-
 
 html {
   background-color: $dark-gray;
@@ -18,6 +18,10 @@ body {
   margin: 0 auto;
   font-family: 'Helvetica', 'sans-serif';
   font-size: large;
+}
+
+h1, h2, h3 {
+  font-family: 'Futura', 'Helvetica', 'sans-serif';
 }
 
 a, a:visited {
@@ -52,46 +56,76 @@ ul.taxonomy-index {
 }
 
 header {
-  padding: 1rem 0;
+  padding: 1rem 0 0.5rem 0;
   border-bottom: $divider-size solid $divider-color;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .header-title {
-  display: inline-block;
-  font-family: 'Century Gothic', 'Helvetica', 'sans-serif';
-
+  font-size: 1.5rem;
   margin: 0;
+
   a {
     color: $off-white;
   }
 }
 
+nav {
+  &.primary {
+    vertical-align: bottom;
+    line-height: $footer-height;
+
+    a {
+      padding: 0 0.5rem;
+      border-right: $divider-size solid $divider-color;
+      &:last-of-type {
+        border: none;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &.intra {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
 
 footer {
   border-top: $divider-size solid $divider-color;
-  text-align: center;
-  padding: 0.5rem;
+  padding: 1rem 0 0.5rem 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   color: darken($off-white, 30%);
-  height: $footer-height;
 
   .copywrong {
-    height: $footer-height;
     line-height: $footer-height;
-    float: left;
   }
 
-  a.social {
-    float: right;
+  .icons {
     height: $footer-height;
-    padding: 0 0.3rem;
-    color: darken($off-white, 40%);
-    &:hover {
-      color: darken($off-white, 20%);
-    }
+    display: inherit;
+    a.social {
+      height: $footer-height;
+      padding: 0 0.3rem;
+      color: darken($off-white, 40%);
+      &:hover {
+        color: darken($off-white, 20%);
+      }
 
-    svg {
-      width: 100%;
-      height: 100%;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
@@ -105,26 +139,6 @@ section.after-main {
   padding: 1rem 0;
 }
 
-nav {
-  &.primary {
-    display: inline-block;
-    float: right;
-  }
-
-  &.intra {
-    width: 100%;
-    text-align: center;
-  }
-
-  a {
-    padding: 0 0.5rem;
-    display: inline-block;
-    border-right: $divider-size solid $divider-color;
-    &:last-of-type {
-      border: none;
-    }
-  }
-}
 
 h1.title {
   margin: 2rem 0 1rem 0;
