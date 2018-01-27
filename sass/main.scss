@@ -138,6 +138,13 @@ h1.title {
   margin-top: 2.5rem;
 }
 
+a.more-posts {
+  display: block;
+  margin-top: 2rem;
+  font-size: larger;
+}
+
+
 blockquote {
   border-left: $divider-size solid $divider-color;
   background-color: lighten($dark-gray, 5%);
