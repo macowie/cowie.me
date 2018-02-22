@@ -118,6 +118,7 @@ footer {
     height: $footer-height;
     display: inherit;
     a.social {
+      width: $footer-height;
       height: $footer-height;
       padding: 0 0.3rem;
       color: darken($off-white, 40%);
