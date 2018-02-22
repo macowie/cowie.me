@@ -1,6 +1,6 @@
 title = "Cowie.me"
 base_url = "https://cowie.me"
-language_code = "en"
+default_language = "en"
 description = ""
 
 compile_sass = true
