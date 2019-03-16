@@ -14,6 +14,10 @@ highlight_theme = "monokai"
 generate_tags_pages = true
 generate_categories_pages = true
 
+taxonomies = [
+  { name = "tags", rss = true }, { name = "category", rss = true }
+]
+
 [extra]
 subtitle = ""
 author = { name = "Matthew Cowie", email = "matthew@cowie.me" }
