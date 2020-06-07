@@ -1,8 +1,8 @@
 +++
-title = "sssss"
+title = ""
 date = 2018-10-10
 
-draft = true
+draft = false
 
 [taxonomies]
 category = []

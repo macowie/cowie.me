@@ -21,3 +21,4 @@ taxonomies = [
 [extra]
 subtitle = ""
 author = { name = "Matthew Cowie", email = "matthew@cowie.me" }
+year = 2020

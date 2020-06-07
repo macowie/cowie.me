@@ -1,10 +1,13 @@
 $dark-gray: #333;
 $off-white: #efefef;
-$green: #50f95f;
+$accent: #50f95f;
 $divider-size: 2px;
 $divider-color: darken($dark-gray, 10%);
 $header-height: 2rem;
 $footer-height: 2rem;
+$fontheaders: 'Futura', 'Trebuchet MS', 'sans-serif';
+$fontbody: 'Helvetica', 'Arial', 'sans-serif';
+$fontui: 'Helvetica', 'Arial', 'sans-serif';
 
 html {
   background-color: $dark-gray;
@@ -16,20 +19,20 @@ body {
   padding: 0.5rem;
   width: 96%;
   margin: 0 auto;
-  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-family: $fontbody;
   font-size: large;
 }
 
-h1, h2, h3 {
-  font-family: 'Futura', 'Trebuchet MS', 'sans-serif';
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontheaders;
 }
 
 a, a:visited {
-  color: $green;
+  color: $accent;
   text-decoration: none;
 
   &:hover {
-    color: lighten($green, 20%);
+    color: lighten($accent, 20%);
   }
 }
 
@@ -56,6 +59,7 @@ ul.taxonomy-index {
 }
 
 header {
+  font: $fontui;
   padding: 1rem 0 0.5rem 0;
   border-bottom: $divider-size solid $divider-color;
 
@@ -101,6 +105,8 @@ nav {
 }
 
 footer {
+  font: $fontui;
+
   border-top: $divider-size solid $divider-color;
   padding: 1rem 0 0.5rem 0;
 
