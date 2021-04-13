@@ -15,7 +15,7 @@ It may not have all the hype it once enjoyed, but SublimeText is still a fantast
 
 ## Plugins
 
-### Terminus
+### [Terminus](https://packagecontrol.io/packages/Terminus)
 
 One of the main reasons I spent a lot of time using other editors is wanting a better terminal integration. Whether that's Vim/Neovim literally running inside a terminal or something like VSCode which embeds its own terminal emulator. There were efforts in the past to add a terminal to Sublime but were fairly limited and understandably finicky. Terminus is on a different level from those. It is able to spawn terminal tabs as faithful as I could imagine within the confines of a SublimeText buffer. While I wouldn't use it for tailing huge logs or other high volume tasks, it's more than good enough for popping into to fire off some git commands, spawn a dev server, and run tests.
 
